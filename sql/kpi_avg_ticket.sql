@@ -1,9 +1,8 @@
-SELECT 
-    AVG(order_total) AS avg_ticket
+SELECT AVG(order_total) AS avg_ticket
 FROM (
     SELECT 
         order_id,
-        SUM(price) AS order_total
-    FROM order_items
+        SUM(payment_value) AS order_total
+    FROM payments
     GROUP BY order_id
 ) sub;

@@ -1,2 +1,2 @@
-SELECT SUM(price) AS total_revenue
-FROM order_items;
+SELECT SUM(payment_value) AS total_revenue
+FROM payments;
